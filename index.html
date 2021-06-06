@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <!-- Webview Clock Version 2 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+
+    <meta name="bs:input:buttonName" content="type=string,description=Display name for the button" />
+        <meta name="bs:output:timeOuput" content="type=string,description=Time output" />
+        <meta name="bs:outlet:Button Clicked" />
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="setCurrentTime()">
+
+    <div class="container">
+        <div class="set-time-container">
+            <p>SET TIME</p>
+            <div class="set-time">
+                <div class="hour-mins-ui">
+                    <input type="text" class="time" id="hours" placeholder="00" maxlength="2" onchange="setHourValue(this.value)">
+                    <span class="semi-colon">:</span>
+                    <input type="text" class="time" id="mins" placeholder="00" maxlength="2" onchange="setMinValue(this.value)">
+                </div>
+                <div class="am-pm">
+                    <button class="am-button" onclick="addStyleClass_AM()">AM</button>
+                    <button class="pm-button" onclick="addStyleClass_PM()" >PM</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button Nav -->
+            <!-- <div class="bottom-nav"> -->
+            <!-- <button class="btn-cancel" onclick="sendResponseCancel()">CANCEL</button> -->
+            <!-- <button class="btn-ok" id="btn" onclick="pass_SetTime()">DONE</button> -->
+            <button class="btn-select" id="btn" onclick="sendResponse()">SELECT</button>
+        <!-- </div> -->
+
+        <!-- Analog Clock Design -->
+        <div class="clock">
+            <div class="hand hour" data-hour-hand></div>
+            <div class="hand minute" data-minute-hand></div>
+
+            <div class="number num-one "><div class="num-rotate-one">1</div></div>
+            <div class="number num-two"><div class="num-rotate-two">2</div></div>
+            <div class="number num-three"><div class="num-rotate-three">3</div></div>
+            <div class="number num-four"><div class="num-rotate-four">4</div></div>
+            <div class="number num-five"><div class="num-rotate-five">5</div></div>
+            <div class="number num-six"><div class="num-rotate-six">6</div></div>
+            <div class="number num-seven"><div class="num-rotate-seven">7</div></div>
+            <div class="number num-eight"><div class="num-rotate-eight">8</div></div>
+            <div class="number num-nine"><div class="num-rotate-nine">9</div></div>
+            <div class="number num-ten"><div class="num-rotate-ten">10</div></div>
+            <div class="number num-eleven"><div class="num-rotate-eleven">11</div></div>
+            <div class="number num-twelve"><div class="num-rotate-twelve">12</div></div>
+        </div>
+
+    </div>
+
+    <script defer src="https://static.botstar.com/webview/sdk/webview-sdk-1.0.0.js"></script>
+    <script src="js/index.js"></script>
+         <!--
+      BotStar Webview SDK is required if you want to use BotStarWebview's functions.
+      Function onChatBotReady will be called when BotStarWebview is ready to use.
+    -->
+
+
+</body>
+</html>
