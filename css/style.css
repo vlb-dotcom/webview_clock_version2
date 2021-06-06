@@ -284,7 +284,23 @@ p {
     margin-left: auto;
     margin-right: auto;
     z-index: 2;
-    margin-bottom: 2em;
-    padding: 1em;
+    margin-bottom: 1.5em;
+    padding: 0.5em;
     width: 80%;
+    background-color: #006AFF;
+    font-size: 1.3rem;
+    color: white;
+    font-family:'Roboto', sans-serif;
+    transition: 0.2s;
+    outline: none;
+    border-radius: 5px;
+    letter-spacing: 0.1em;
+}
+
+.btn-select:hover, .btn-select:focus {
+    outline: none;
+    transition: 0.2s;
+    cursor: pointer;
+    font-weight: bolder;
+    transform: scale(1.05);
 }
